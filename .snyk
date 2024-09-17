@@ -1,0 +1,25 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-AXIOS-174505:
+    - mycrypto-eth-exists > axios:
+        patched: '2024-09-17T07:06:02.916Z'
+        id: SNYK-JS-AXIOS-174505
+        path: mycrypto-eth-exists > axios
+  SNYK-JS-LODASH-567746:
+    - mycrypto-shepherd > @types/remote-redux-devtools > redux > lodash:
+        patched: '2024-09-17T07:06:02.916Z'
+        id: SNYK-JS-LODASH-567746
+        path: mycrypto-shepherd > @types/remote-redux-devtools > redux > lodash
+    - mycrypto-shepherd > remote-redux-devtools > redux-devtools-instrument > lodash:
+        patched: '2024-09-17T07:06:02.916Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          mycrypto-shepherd > remote-redux-devtools > redux-devtools-instrument
+          > lodash
+    - mycrypto-shepherd > remote-redux-devtools > remotedev-utils > lodash:
+        patched: '2024-09-17T07:06:02.916Z'
+        id: SNYK-JS-LODASH-567746
+        path: mycrypto-shepherd > remote-redux-devtools > remotedev-utils > lodash
