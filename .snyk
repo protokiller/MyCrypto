@@ -1,0 +1,38 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-AXIOS-174505:
+    - mycrypto-eth-exists > axios:
+        patched: '2025-07-16T09:56:43.724Z'
+        id: SNYK-JS-AXIOS-174505
+        path: mycrypto-eth-exists > axios
+  'npm:extend:20180424':
+    - react-markdown > unified > extend:
+        patched: '2025-07-16T09:56:43.724Z'
+        id: 'npm:extend:20180424'
+        path: react-markdown > unified > extend
+  SNYK-JS-LODASH-567746:
+    - redux > lodash:
+        patched: '2025-07-16T09:56:43.724Z'
+        id: SNYK-JS-LODASH-567746
+        path: redux > lodash
+    - react-redux > lodash:
+        patched: '2025-07-16T09:56:43.724Z'
+        id: SNYK-JS-LODASH-567746
+        path: react-redux > lodash
+    - mycrypto-shepherd > @types/remote-redux-devtools > redux > lodash:
+        patched: '2025-07-16T09:56:43.724Z'
+        id: SNYK-JS-LODASH-567746
+        path: mycrypto-shepherd > @types/remote-redux-devtools > redux > lodash
+    - mycrypto-shepherd > remote-redux-devtools > redux-devtools-instrument > lodash:
+        patched: '2025-07-16T09:56:43.724Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          mycrypto-shepherd > remote-redux-devtools > redux-devtools-instrument
+          > lodash
+    - mycrypto-shepherd > remote-redux-devtools > remotedev-utils > lodash:
+        patched: '2025-07-16T09:56:43.724Z'
+        id: SNYK-JS-LODASH-567746
+        path: mycrypto-shepherd > remote-redux-devtools > remotedev-utils > lodash
