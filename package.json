@@ -21,10 +21,10 @@
     "classnames": "2.2.5",
     "electron-updater": "2.21.10",
     "ethereum-blockies-base64": "1.0.2",
-    "ethereumjs-abi": "git://github.com/ethereumjs/ethereumjs-abi.git#09c3c48fd3bed143df7fa8f36f6f164205e23796",
-    "ethereumjs-tx": "1.3.4",
+    "ethereumjs-abi": "0.6.8",
+    "ethereumjs-tx": "2.1.2",
     "ethereumjs-util": "5.1.5",
-    "ethereumjs-wallet": "0.6.0",
+    "ethereumjs-wallet": "1.0.2",
     "font-awesome": "4.7.0",
     "hdkey": "0.8.0",
     "html2canvas": "1.0.0-alpha.12",
@@ -43,7 +43,7 @@
     "react": "16.3.2",
     "react-copy-to-clipboard": "5.0.1",
     "react-datetime": "2.14.0",
-    "react-dom": "16.3.2",
+    "react-dom": "16.3.3",
     "react-markdown": "3.3.0",
     "react-redux": "5.0.7",
     "react-router-dom": "4.2.2",
@@ -57,11 +57,12 @@
     "rskjs-util": "1.0.3",
     "scryptsy": "2.0.0",
     "semver": "5.5.0",
-    "trezor.js": "6.17.5",
+    "trezor.js": "9.3.4",
     "uuid": "3.2.1",
     "wallet-address-validator": "0.1.6",
     "whatwg-fetch": "2.0.3",
-    "zxcvbn": "4.4.2"
+    "zxcvbn": "4.4.2",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/bip39": "2.4.0",
@@ -194,7 +195,9 @@
     "prettier:diff": "prettier --write --config ./.prettierrc --list-different \"common/**/*.ts\" \"common/**/*.tsx\"",
     "prepush": "npm run tslint && npm run tscheck",
     "update:tokens": "ts-node scripts/update-tokens",
-    "postinstall": "electron-rebuild --force"
+    "postinstall": "electron-rebuild --force",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -208,5 +211,6 @@
     "common/store.ts",
     "common/libs/decrypt.ts",
     "common/libs/signing.ts"
-  ]
+  ],
+  "snyk": true
 }
